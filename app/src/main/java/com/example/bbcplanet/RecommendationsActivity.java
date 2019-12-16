@@ -19,10 +19,8 @@ public class RecommendationsActivity extends AppCompatActivity {
         TextView t2 = (TextView) findViewById(R.id.link1);
         t2.setMovementMethod(LinkMovementMethod.getInstance());
 
-        VideoView w2 = (VideoView) findViewById(R.id.videoView2);
 //        w2.setVideoURI(Uri("https://www.bbc.co.uk/iplayer/episode/p04thmv7/blue-planet-ii-series-1-1-one-ocean"));
 
-        w2.setVideoURI(Uri.parse("https://www.youtube.com/watch?v=bzTWI4pKNy4"));
 
 
 //        w2.setVideoPath("https://www.youtube.com/watch?v=bzTWI4pKNy4");

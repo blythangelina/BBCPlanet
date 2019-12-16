@@ -45,7 +45,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:text="Videos and links recommended for you"
+        android:text="Links recommended for you"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userPicture" />
@@ -69,21 +69,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <VideoView
-        android:id="@+id/videoView2"
-        android:layout_width="138dp"
-        android:layout_height="145dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginLeft="26dp"
-        android:layout_marginTop="328dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginRight="46dp"
-        android:clickable="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bbcLogo" />
 
     <ImageView
         android:id="@+id/bbcLogo"

@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.media.Image;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,10 +25,23 @@ public class MainActivity<imageView> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.imageView = (ImageView)this.findViewById(R.id.imageView);
+        ImageView greenPlanetLogo = (ImageView) findViewById(R.id.greenPlanet);
+        greenPlanetLogo.setImageResource(R.drawable.green_planet);
+
+        this.imageView = (ImageView)this.findViewById(R.id.greenPlanet);
 
         TextView textView = (TextView) findViewById(R.id.recyclableResult);
         textView.setVisibility(View.INVISIBLE);
+
+        Button myRecButton = (Button) findViewById(R.id.recButton);
+        myRecButton.setVisibility(View.INVISIBLE);
+
+        ImageView myLogo = (ImageView) findViewById(R.id.bbcLogoResultPage);
+        ImageView myUserPic = (ImageView) findViewById(R.id.userPictureResultpage);
+
+        myLogo.setVisibility(View.INVISIBLE);
+        myUserPic.setVisibility(View.INVISIBLE);
+
 
     }
 
@@ -48,6 +63,28 @@ public class MainActivity<imageView> extends AppCompatActivity {
             TextView textView = (TextView) findViewById(R.id.recyclableResult);
             textView.setVisibility(View.VISIBLE);
             textView.setText("RECYCYLE!"); //set text for text view
+
+            Button myRecButton = (Button) findViewById(R.id.recButton);
+            myRecButton.setVisibility(View.VISIBLE);
+
+            Button pictureButton = (Button) findViewById(R.id.button);
+            pictureButton.setVisibility(View.INVISIBLE);
+
+
+            ImageView myLogo = (ImageView) findViewById(R.id.bbcLogoResultPage);
+            ImageView myUserPic = (ImageView) findViewById(R.id.userPictureResultpage);
+
+            myLogo.setVisibility(View.VISIBLE);
+            myUserPic.setVisibility(View.VISIBLE);
+
+            myLogo.setImageResource(R.drawable.bbc_logo);
+            myUserPic.setImageResource(R.drawable.user_picture);
+
+            myRecButton.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View v){
+                    startActivity(new Intent(MainActivity.this, RecommendationsActivity.class));
+                }
+            });
 
         }
     }

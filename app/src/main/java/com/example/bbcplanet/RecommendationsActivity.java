@@ -2,6 +2,7 @@ package com.example.bbcplanet;
 
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -22,13 +23,13 @@ public class RecommendationsActivity extends AppCompatActivity {
 
         w2.setVideoPath("https://www.youtube.com/watch?v=bzTWI4pKNy4");
 
-//        // Get the Intent that started this activity and extract the string
-//        Intent intent = getIntent();
-//        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-//
-//        // Capture the layout's TextView and set the string as its text
-//        TextView textView = findViewById(R.id.textView);
-//        textView.setText(message);
+        ImageView myLogo = (ImageView) findViewById(R.id.bbcLogo);
+        myLogo.setImageResource(R.drawable.bbc_logo);
+
+        ImageView myPicture = (ImageView) findViewById(R.id.userPicture);
+        myPicture.setImageResource(R.drawable.user_picture);
+
+
     }
 
 }

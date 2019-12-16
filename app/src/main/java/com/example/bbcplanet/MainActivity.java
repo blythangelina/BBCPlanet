@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity<imageView> extends AppCompatActivity {
 
@@ -23,6 +24,9 @@ public class MainActivity<imageView> extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.imageView = (ImageView)this.findViewById(R.id.imageView);
+
+        TextView textView = (TextView) findViewById(R.id.recyclableResult);
+        textView.setVisibility(View.INVISIBLE);
 
     }
 
@@ -40,6 +44,11 @@ public class MainActivity<imageView> extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             imageView.setImageBitmap(imageBitmap);
+
+            TextView textView = (TextView) findViewById(R.id.recyclableResult);
+            textView.setVisibility(View.VISIBLE);
+            textView.setText("RECYCYLE!"); //set text for text view
+
         }
     }
 

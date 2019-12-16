@@ -26,7 +26,7 @@ public class MainActivity<imageView> extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView greenPlanetLogo = (ImageView) findViewById(R.id.greenPlanet);
-        greenPlanetLogo.setImageResource(R.drawable.green_planet);
+        greenPlanetLogo.setImageResource(R.drawable.bbc_planet);
 
         this.imageView = (ImageView)this.findViewById(R.id.greenPlanet);
 

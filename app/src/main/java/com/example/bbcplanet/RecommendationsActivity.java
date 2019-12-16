@@ -1,5 +1,6 @@
 package com.example.bbcplanet;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.widget.ImageView;
@@ -21,7 +22,10 @@ public class RecommendationsActivity extends AppCompatActivity {
         VideoView w2 = (VideoView) findViewById(R.id.videoView2);
 //        w2.setVideoURI(Uri("https://www.bbc.co.uk/iplayer/episode/p04thmv7/blue-planet-ii-series-1-1-one-ocean"));
 
-        w2.setVideoPath("https://www.youtube.com/watch?v=bzTWI4pKNy4");
+        w2.setVideoURI(Uri.parse("https://www.youtube.com/watch?v=bzTWI4pKNy4"));
+
+
+//        w2.setVideoPath("https://www.youtube.com/watch?v=bzTWI4pKNy4");
 
         ImageView myLogo = (ImageView) findViewById(R.id.bbcLogo);
         myLogo.setImageResource(R.drawable.bbc_logo);

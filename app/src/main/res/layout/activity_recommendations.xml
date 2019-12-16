@@ -13,19 +13,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="336dp"
         android:autoLink="web"
         android:autoText="false"
         android:clickable="true"
         android:text="https://www.bbc.co.uk/news/business-50662378"
         android:textIsSelectable="false"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/link1" />
 
     <ImageView
         android:id="@+id/userPicture"
@@ -56,19 +56,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
+        android:layout_marginTop="104dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="372dp"
         android:autoLink="web"
         android:autoText="false"
         android:clickable="true"
         android:text="https://www.bbc.co.uk/news/science_and_environment"
         android:textIsSelectable="false"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <VideoView
         android:id="@+id/videoView2"
@@ -76,17 +76,14 @@
         android:layout_height="145dp"
         android:layout_marginStart="26dp"
         android:layout_marginLeft="26dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="328dp"
         android:layout_marginEnd="46dp"
         android:layout_marginRight="46dp"
-        android:layout_marginBottom="42dp"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/link2"
-        app:layout_constraintVertical_bias="0.468" />
+        app:layout_constraintTop_toBottomOf="@+id/bbcLogo" />
 
     <ImageView
         android:id="@+id/bbcLogo"
@@ -98,5 +95,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/MessageForUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="Just for you"
+        app:layout_constraintEnd_toStartOf="@+id/userPicture"
+        app:layout_constraintTop_toBottomOf="@+id/bbcLogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
